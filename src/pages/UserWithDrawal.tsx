@@ -1,13 +1,12 @@
 import AuthPage from 'components/common/AuthPage';
 import LabeledInput from 'components/common/LabeledInput';
 import Snackbar, { MESSAGE } from 'components/common/Snackbar';
-import withAuthPage from 'components/hoc/withAuthPage';
 import { useAppDispatch } from 'hooks/useAppDispatch';
 import { useAppSelector } from 'hooks/useAppSelector';
 import useAuthError from 'hooks/useAuthError';
 import useInput from 'hooks/useInput';
 import useSnackBar from 'hooks/useSnackBar';
-import React, { FormEvent, useEffect } from 'react';
+import { FormEvent, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { deleteUser } from 'redux/user/thunk';
 import { PATH } from 'Routers';
@@ -47,4 +46,4 @@ const UserWithDrawal = () => {
   );
 };
 
-export default withAuthPage(UserWithDrawal, true);
+export default UserWithDrawal;
