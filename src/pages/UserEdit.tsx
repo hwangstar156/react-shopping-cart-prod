@@ -1,4 +1,4 @@
-import AuthPage from 'components/common/AuthPage';
+import AuthForm from 'components/common/AuthPage';
 import LabeledInput from 'components/common/LabeledInput';
 import Snackbar, { MESSAGE } from 'components/common/Snackbar';
 import PasswordConfirmModal from 'components/UserEdit/PasswordConfirmModal';
@@ -32,7 +32,7 @@ const UserEdit = () => {
   };
 
   return (
-    <AuthPage title='회원 정보 수정' onSubmitAuthForm={onSubmitAuthForm}>
+    <AuthForm title='회원 정보 수정' onSubmitAuthForm={onSubmitAuthForm}>
       <LabeledInput
         label='이름'
         id='name'
@@ -43,7 +43,7 @@ const UserEdit = () => {
       />
       {isShowModal && <PasswordConfirmModal closeModal={toggleModal} name={name} />}
       {isOpenSnackbar && <Snackbar message={MESSAGE.editUser} />}
-    </AuthPage>
+    </AuthForm>
   );
 };
 

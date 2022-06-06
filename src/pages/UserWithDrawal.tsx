@@ -1,4 +1,4 @@
-import AuthPage from 'components/common/AuthPage';
+import AuthForm from 'components/common/AuthPage';
 import LabeledInput from 'components/common/LabeledInput';
 import Snackbar, { MESSAGE } from 'components/common/Snackbar';
 import { useAppDispatch } from 'hooks/useAppDispatch';
@@ -32,7 +32,7 @@ const UserWithDrawal = () => {
   };
 
   return (
-    <AuthPage title='회원 탈퇴' onSubmitAuthForm={onSubmitForm}>
+    <AuthForm title='회원 탈퇴' onSubmitAuthForm={onSubmitForm}>
       <LabeledInput
         label='비밀번호'
         type='password'
@@ -42,7 +42,7 @@ const UserWithDrawal = () => {
         onChange={setPassword}
       />
       {isOpenSnackbar && <Snackbar message={MESSAGE.password} />}
-    </AuthPage>
+    </AuthForm>
   );
 };
 

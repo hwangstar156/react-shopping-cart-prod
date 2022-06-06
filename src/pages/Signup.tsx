@@ -1,4 +1,4 @@
-import AuthPage from 'components/common/AuthPage';
+import AuthForm from 'components/common/AuthPage';
 import LabeledInput from 'components/common/LabeledInput';
 import Snackbar, { MESSAGE } from 'components/common/Snackbar';
 import { ALERT_MESSAGE } from 'constants/index';
@@ -36,7 +36,7 @@ const Signup = () => {
   };
 
   return (
-    <AuthPage title='회원가입' onSubmitAuthForm={onSubmitAuthForm}>
+    <AuthForm title='회원가입' onSubmitAuthForm={onSubmitAuthForm}>
       <LabeledInput
         label='이메일'
         id='email'
@@ -72,7 +72,7 @@ const Signup = () => {
         onChange={onChangePasswordConfirmation}
       />
       {isOpenSnackbar && <Snackbar message={MESSAGE.passwordConfirm} />}
-    </AuthPage>
+    </AuthForm>
   );
 };
 

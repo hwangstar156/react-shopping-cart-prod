@@ -1,4 +1,4 @@
-import AuthPage from 'components/common/AuthPage';
+import AuthForm from 'components/common/AuthPage';
 import LabeledInput from 'components/common/LabeledInput';
 import Snackbar, { MESSAGE } from 'components/common/Snackbar';
 import { ALERT_MESSAGE } from 'constants/index';
@@ -54,7 +54,7 @@ const Login = () => {
   }, [name, navigate]);
 
   return (
-    <AuthPage
+    <AuthForm
       title='로그인'
       onSubmitAuthForm={onSubmitAuthForm}
       bottom={
@@ -80,7 +80,7 @@ const Login = () => {
         onChange={onChangePassword}
       />
       {isOpenSnackbar && <Snackbar message={MESSAGE.login} />}
-    </AuthPage>
+    </AuthForm>
   );
 };
 
